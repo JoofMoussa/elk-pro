@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/JoofMoussa/elk-pro/issues"
   },
-  "homepage": "https://github.com/JoofMoussa/elk-pro#readme"
+  "homepage": "https://github.com/JoofMoussa/elk-pro#readme",
+  "dependencies": {
+    "elasticsearch": "^16.7.3",
+    "es6": "npm:@elastic/elasticsearch@^6.8.8",
+    "es7": "npm:@elastic/elasticsearch@^7.17.12"
+  }
 }
