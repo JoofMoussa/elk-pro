@@ -1,0 +1,62 @@
+Arguments: 
+  /usr/local/bin/node /snap/node/7707/bin/yarn.js global dir --json
+
+PATH: 
+  /home/kala/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/kala/Documents/anaconda3/bin:/home/kala/Documents/anaconda3/condabin:/home/kala/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/bin/Postman
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.17.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: ../../package.json: EACCES: permission denied, write
+      at writeSync (fs.js:733:3)
+      at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)
+      at writeOrBuffer (internal/streams/writable.js:358:12)
+      at SyncWriteStream.Writable.write (internal/streams/writable.js:303:10)
+      at JSONReporter._dump (/snap/node/7707/lib/cli.js:49577:12)
+      at JSONReporter.warn (/snap/node/7707/lib/cli.js:49625:10)
+      at warn (/snap/node/7707/lib/cli.js:51326:23)
+      at module.exports.exports.default (/snap/node/7707/lib/cli.js:37409:7)
+      at /snap/node/7707/lib/cli.js:51337:51
+      at Generator.next (<anonymous>)
+
+npm manifest: 
+  {
+    "name": "elk-pro",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/JoofMoussa/elk-pro.git"
+    },
+    "author": "JoofMoussa",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/JoofMoussa/elk-pro/issues"
+    },
+    "homepage": "https://github.com/JoofMoussa/elk-pro#readme",
+    "dependencies": {
+      "axios": "^1.4.0",
+      "cors": "^2.8.5",
+      "elasticsearch": "^16.7.3",
+      "es6": "npm:@elastic/elasticsearch@^6.8.8",
+      "es7": "npm:@elastic/elasticsearch@^7.17.12",
+      "express": "^4.18.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -9,6 +9,18 @@ app.use(express.json());
 const cors = require('cors');
 app.use(cors());
 
+const path = require("path");
+
+const port = 3003;
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/", (req, res) => {
+    const query = req.query;
+    res.sendFile(path.join(__dirname, "public", "index.html"), {
+        query: JSON.stringify(query),
+    });
+});
 
 app.post("/Create", async(req, res) => {
     try {
@@ -118,6 +130,18 @@ app.delete("/Delete/:index/:id", async(req, res) => {
     }
 });
 
+// Add this route before your app.listen()
+
+app.get("/getAllData", async(req, res) => {
+    try {
+        const esResponse = await axios.get(`${esUrl}_search`);
+        const hits = esResponse.data.hits.hits;
+        const allData = hits.map(hit => hit._source);
+        res.json(allData);
+    } catch (error) {
+        res.status(500).json(error);
+    }
+});
 
 
 app.get("/data/:index", async(req, res) => {

@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/JoofMoussa/elk-pro#readme",
   "dependencies": {
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
     "elasticsearch": "^16.7.3",
     "es6": "npm:@elastic/elasticsearch@^6.8.8",
-    "es7": "npm:@elastic/elasticsearch@^7.17.12"
+    "es7": "npm:@elastic/elasticsearch@^7.17.12",
+    "express": "^4.18.2"
   }
 }
